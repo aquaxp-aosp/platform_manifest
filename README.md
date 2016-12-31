@@ -40,29 +40,48 @@ repo init -u https://github.com/aquaxp-aosp/platform_manifest -b aosp-7.1
 ```
 
 Syncing repo:
-```
-repo sync --no-clone-bundle -j$(# of CPUs x2)
-```
+
+    repo sync --no-clone-bundle -j$(# of CPUs x2)
+
 
 Initializing env
-```
-source build/envsetup.sh
-```
+
+    source build/envsetup.sh
 
 Choosing a target
-```
-lunch
-```
+
+    lunch
+
 
 Building OTA zip, where N is number of jobs
-```
-make otapackage -jN
-```
+
+    make otapackage -jN
+
 
 Building images, where N is number of jobs
-```
-make -jN
-```
+
+    make -jN
+
+If you wanna release your firmware, you need to do this instead:
+
+    make -jN dist
+    
+then sign files:
+
+    export KEY_DIR=./your_path_to_dir_with_keys
+    ./build/tools/releasetools/sign_target_file_apks -o -d $KEY_DIR out/dist/.*-target_files.*.zip /tmp/signed.zip
+
+Generate relaese files with full system image:
+
+    ./build/tools/releasetools/img_from_target_files /tmp/signed.zip /tmp/final-release.zip
+
+or OTA package (also capable with custom recovery):
+
+    ./build/tools/releasetools/ota_from_target_files /tmp/signed.zip /tmp/final-full-ota.zip
+
+or Incremental OTA:
+
+     ./build/tools/releasetools/ota_from_target_files -k $KEY_DIR/platform -i /tmp/last-signed.zip /tmp/signed.zip /tmp/final-full-ota.zip
 
 How to sync with 3-rd party repos
 ------------------------------------
