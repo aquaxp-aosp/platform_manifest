@@ -106,6 +106,16 @@ git push origin ${my_branch}
 cd ..
 ```
 
+Another way to merge changes from AOSP(we will use android-7.1.1_r13 tag for bionic):
+```
+git clone https://github.com/aquaxp-aosp/bionic -b aosp-7.1; cd bionic
+git remote add upstream https://android.googlesource.com/platform/bionic/
+git fetch upstream
+git merge android-7.1.1_r13
+git diff
+git push
+```
+
 Trobleshooting
 --------------
 If you experience Jack compilations failing on `Out of memory error.`, stop the server using `jack-admin stop-server`, and then:
