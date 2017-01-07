@@ -1,9 +1,9 @@
-# AOSP 7.1.0_r4 Manifest for hammerhead
+# AOSP 7.1.1_r1 for hammerhead
 
 Getting Started
 ---------------
-To get started with the Minimal sources, you'll need to get
-familiar with [Git and Repo](http://source.android.com/source/version-control.html).
+To get started with the AOSP sources, you'll need to get
+familiar with [Git and Repo](http://source.android.com/source/git-resources.html).
 
 Create the Directories
 ----------------------
@@ -12,10 +12,9 @@ You will need to set up some directories in your build environment.
 First for repo tool and second for firmware build location.
 
 To create them run:
-```
-mkdir -p ~/bin
-mkdir -p ~/android_firmware
-```
+
+    mkdir -p ~/bin
+    mkdir -p ~/android_firmware
 
 Install the Repository
 ----------------------
@@ -65,7 +64,7 @@ Building images, where N is number of jobs
 If you wanna release your firmware, you need to do this instead:
 
     make -jN dist
-    
+
 then sign files:
 
     export KEY_DIR=./your_path_to_dir_with_keys
