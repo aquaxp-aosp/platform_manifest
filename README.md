@@ -1,4 +1,4 @@
-# AOSP 7.1.1_r1 for hammerhead
+# AOSP 7.1.1_r13 for hammerhead
 
 Getting Started
 ---------------
