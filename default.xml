@@ -10,8 +10,8 @@
   <remote  name="aquaxp"
            fetch="https://github.com/aquaxp" />
 
-  <remote  name="muppets"
-           fetch="https://github.com/TheMuppets" />
+  <remote  name="PNP"
+           fetch="https://github.com/PureNexusProject" />
 
   <default revision="refs/tags/android-7.1.1_r22"
            remote="aosp"
@@ -36,11 +36,13 @@
   <project path="hardware/qcom/audio" name="hardware_qcom_audio" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="hardware/qcom/gps" name="hardware_qcom_gps" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" remote="aquaxp-aosp" revision="aosp-7.1" />
+<!-- begin hammerhead -->
   <project path="hardware/qcom/msm8x74" name="hardware_qcom_msm8x74" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="device/lge/hammerhead" name="device_lge_hammerhead" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="kernel/lge/hammerhead" name="kernel_lge_hammerhead" remote="aquaxp-aosp" revision="aosp-7.1" />
+<!-- end hammerhead -->
   <project path="device/lge/bullhead" name="device_lge_bullhead" remote="aquaxp-aosp" revision="aosp-7.1" />
-  <project path="vendor/lge" name="proprietary_vendor_lge" remote="muppets" revision="cm-14.1" />
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="PNP" revision="n-mr1" />
 <!-- end external -->
 
   <project path="device/lge/bullhead-kernel" name="device/lge/bullhead-kernel" groups="device,bullhead" clone-depth="1" />
