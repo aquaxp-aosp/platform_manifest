@@ -122,3 +122,12 @@ If you experience Jack compilations failing on `Out of memory error.`, stop the 
 and restart your build command (hint from [Jack README](https://android.googlesource.com/platform/prebuilts/sdk/+/master/tools/README-jack-server.md#If-you-experience-Jack-compilations-failing-on)).
 
 ~~If you're using Ubuntu 16.04, you should apply this fix to kernel sources - https://gerrit.omnirom.org/#/c/12887/1/kernel/timeconst.pl~~
+
+FC in DeskClock:
+Append to `frameworks/support/design/proguard-rules.pro`:
+```
+# Preference objects are inflated via reflection
+-keep public class android.support.v7.widget.SearchView {
+    public <init>(android.content.Context);
+}
+```
