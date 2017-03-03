@@ -1,4 +1,4 @@
-# AOSP 7.1.1_r13 for hammerhead
+# AOSP 7.1.1_r22 for hammerhead
 
 Getting Started
 ---------------
@@ -105,12 +105,12 @@ git push origin ${my_branch}
 cd ..
 ```
 
-Another way to merge changes from AOSP(we will use android-7.1.1_r13 tag for bionic):
+Another way to merge changes from AOSP(we will use android-7.1.1_r22 tag for bionic):
 ```
 git clone https://github.com/aquaxp-aosp/bionic -b aosp-7.1; cd bionic
 git remote add upstream https://android.googlesource.com/platform/bionic/
 git fetch upstream
-git merge android-7.1.1_r13
+git merge android-7.1.1_r22
 git diff
 git push
 ```

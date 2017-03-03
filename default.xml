@@ -10,7 +10,10 @@
   <remote  name="aquaxp"
            fetch="https://github.com/aquaxp" />
 
-  <default revision="refs/tags/android-7.1.1_r13"
+  <remote  name="muppets"
+           fetch="https://github.com/TheMuppets" />
+
+  <default revision="refs/tags/android-7.1.1_r22"
            remote="aosp"
            sync-j="4" />
 
@@ -22,10 +25,10 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="packages/apps/SMSSecure" name="android_packages_apps_SMSSecure" remote="aquaxp" revision="aosp-7.1" />
   <project path="system/extras" name="system_extras" remote="aquaxp-aosp" revision="aosp-7.1" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="frameworks/base" name="frameworks_base" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="frameworks/av" name="frameworks_av" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="bionic" name="bionic" remote="aquaxp-aosp" revision="aosp-7.1" />
-  <project path="system/sepolicy" name="system_sepolicy" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="vendor/aquaxp" name="vendor_aquaxp" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="hardware/qcom/bt" name="hardware_qcom_bt" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="hardware/qcom/display" name="hardware_qcom_display" remote="aquaxp-aosp" revision="aosp-7.1" />
@@ -34,11 +37,13 @@
   <project path="hardware/qcom/gps" name="hardware_qcom_gps" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="hardware/qcom/keymaster" name="hardware_qcom_keymaster" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="hardware/qcom/msm8x74" name="hardware_qcom_msm8x74" remote="aquaxp-aosp" revision="aosp-7.1" />
-  <project path="vendor/lge/hammerhead" name="vendor_lge_hammerhead" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="device/lge/hammerhead" name="device_lge_hammerhead" remote="aquaxp-aosp" revision="aosp-7.1" />
   <project path="kernel/lge/hammerhead" name="kernel_lge_hammerhead" remote="aquaxp-aosp" revision="aosp-7.1" />
+  <project path="device/lge/bullhead" name="device_lge_bullhead" remote="aquaxp-aosp" revision="aosp-7.1" />
+  <project path="vendor/lge" name="proprietary_vendor_lge" remote="muppets" revision="cm-14.1" />
 <!-- end external -->
 
+  <project path="device/lge/bullhead-kernel" name="device/lge/bullhead-kernel" groups="device,bullhead" clone-depth="1" />
   <project path="device/generic/goldfish" name="device/generic/goldfish" groups="pdk" />
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
   <project path="build/kati" name="platform/build/kati" groups="pdk,tradefed" />
