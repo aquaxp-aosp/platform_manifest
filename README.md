@@ -123,6 +123,9 @@ and restart your build command (hint from [Jack README](https://android.googleso
 
 ~~If you're using Ubuntu 16.04, you should apply this fix to kernel sources - https://gerrit.omnirom.org/#/c/12887/1/kernel/timeconst.pl~~
 
+If build fail on first steps, try to execute:
+`mkdir -p /home/aquaxp/android_firmware/out/target/product/bullhead/obj/KERNEL_OBJ/usr`
+
 FC in DeskClock:
 Append to `frameworks/support/design/proguard-rules.pro`:
 ```
